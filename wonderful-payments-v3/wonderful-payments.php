@@ -31,12 +31,10 @@ define('ASPSP_PARAMETER', 'aspsp');
  * Initialize the Wonderful Payments plugin.
  */
 function wc_wonderful_plugin() {
-    wc_get_logger()->debug('Loading wc_wonderful_plugin');
-
     if(!class_exists('WC_Payment_Gateway')) {
         return;
     }
-    require_once (plugin_dir_path(__FILE__)) . 'class-gateway.php';
+    require_once(plugin_dir_path(__FILE__)) . 'class-gateway.php';
 }
 
 /**

@@ -28,7 +28,6 @@ final class WC_Wonderful_Payments_Gateway_Blocks extends AbstractPaymentMethodTy
                 break;
             }
         }
-//        $this->gateway = new WC_Wonderful_Payments_Gateway();
     }
 
     /**
@@ -48,7 +47,7 @@ final class WC_Wonderful_Payments_Gateway_Blocks extends AbstractPaymentMethodTy
     public function get_payment_method_script_handles() {
         wp_register_script(
             'wonderful_payments_gateway-blocks-integration',
-            plugin_dir_url(__FILE__) . 'checkout.js',
+            plugin_dir_url( __FILE__ ) . 'checkout.js',
             [
                 'wc-blocks-registry',
                 'wc-settings',
@@ -75,7 +74,7 @@ final class WC_Wonderful_Payments_Gateway_Blocks extends AbstractPaymentMethodTy
 
         return [
             'title' => $this->gateway->title,
-            'icon' => plugin_dir_url(__DIR__) . 'assets/logo.png',
+            'icon' => plugin_dir_url( __DIR__ ) . 'assets/logo.png',
             'banks' => $banks->data ?? [],
         ];
     }
